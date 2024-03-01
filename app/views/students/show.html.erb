@@ -1,0 +1,15 @@
+<h1>Show single student details</h1>
+
+<p><%= notice %></p>
+
+<p><strong>Name: </strong><%= @student.name %></p>
+<p><strong>Email: </strong><%= @student.email %></p>
+<p><strong>age: </strong><%= @student.age %></p>
+<p><strong>age: </strong><%= @student.permanent_contact_number %></p>
+<p><strong>age: </strong><%= @student.date_of_birth %></p>
+<p><strong>age: </strong><%= @student.local_address %></p>
+<p><strong>age: </strong><%= @student.permanent_address %></p>
+<p><strong>age: </strong><%= @student.alternate_contact_number %></p>
+
+<%= link_to 'Back', students_path %> <%= link_to "Edit", edit_student_path %><br>
+<%= link_to 'Add new details', new_student_path %>

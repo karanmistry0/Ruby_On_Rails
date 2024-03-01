@@ -1,0 +1,42 @@
+<h1>Student Details</h1>
+
+<p><%= notice %></p>
+
+<%= link_to 'Add new details', new_student_path %><br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>Permanent contact number</th>
+      <th>Alternate Contact NUmber</th>
+      <th>Date of Birth</th>
+      <th>Local Address</th>
+      <th>Permanent Address</th>
+
+      <th>Link</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.name %></td>
+        <td><%= student.email %></td>
+        <td><%= student.age %></td>
+        <td><%= student.permanent_contact_number %></td>
+        <td><%= student.alternate_contact_number %></td>
+        <td><%= student.date_of_birth %></td>
+        <td><%= student.local_address %></td>
+        <td><%= student.permanent_address %></td>
+
+
+        <td><%= link_to 'View',student %>  </td>
+        <td><%= link_to "Edit", edit_student_path(student) %></td>
+        <td><%= button_to 'Delete', student,method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
